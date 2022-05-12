@@ -1,0 +1,128 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+/*VARIABLE*/
+:ROOT {
+  /*Background*/
+  --darkBlue: hsl(233, 47%, 7%);
+  --mainBlue: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+
+  /*text*/
+
+  --mainWhite: hsl(0, 0%, 100%);
+  --whitePG: hsla(0, 0%, 100%, 0.75);
+  --whiteSh:  hsla(0, 0%, 100%, 0.6);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--darkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div.card {
+  display: flex;
+  background-color: var(--mainBlue);
+  width: 1440px;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 500px;
+}
+
+.cardLeft {
+  width: 50%;
+  background-color: var(--desaturated-blue);
+  padding: 5rem;
+}
+
+.cardLeft h1 {
+  color: var(--mainWhite);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.cardLeft p {
+  font-size: 1.2rem;
+  color: var(--whiteSh);
+  margin-top: 3rem;
+  margin-bottom: 4.5rem;
+
+}
+
+.card ul {
+  display: flex;
+  list-style-type: none;
+  color: var(--whitePG);
+}
+
+.card li {
+  color: var(--mainWhite);
+  font-size: 2rem;
+  margin-right: 5rem;
+  font-weight: bold;
+}
+
+.listType {
+  color: var(--whiteSh);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.cardIMG {
+  width: 50%;
+  background-color: var(--violet);
+}
+.cardIMG img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: hard-light;
+}
+
+.violet {
+  color: var(--violet);
+}
+
+
+@media only screen and (max-width: 960px) {
+  div.card {
+      width: 375px;
+      flex-direction: column;
+      height: auto;
+  }
+  .cardLeft, .cardIMG {
+    width: 100%;
+  }
+  .cardIMG {
+    order: 1;
+  }
+  .cardLeft {
+    text-align: center;
+    padding: 3rem;
+    order: 2;
+  }
+  .cardLeft h1 {
+    font-size: 2rem;
+  }
+  .cardLeft p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .cardLeft ul {
+    flex-direction: column;
+  }
+  .cardLeft li {
+    margin-right: 0;
+    margin-top: 1.5rem;
+}
+}
